@@ -25,6 +25,24 @@
 
 
 ## Working
+<details>
+  <summary>Detail</summary>
+
+  > Explain the working of your model with the help of a functional table (compulsory) followed by the flowchart.
+</details>
+
 ## Logisim
+<details>
+  <summary>Detail</summary>
+
+  > Update a neat logisim circuit diagram
+</details>
+
 ## Verilog Code
+<details>
+  <summary>Detail</summary>
+
+  > Neatly update the Verilog code in code style only.
+</details>
+
 
