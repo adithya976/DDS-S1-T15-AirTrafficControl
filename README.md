@@ -1,2 +1,2 @@
-# Real Time Air Traffuc Control System
+# Real Time Air Traffic Control System
 DDS Mini Project-RTATC
