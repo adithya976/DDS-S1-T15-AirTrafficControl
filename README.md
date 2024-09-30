@@ -1,2 +1,2 @@
-# DDS-T15-RTATC
+# Real Time Air Traffuc Control System
 DDS Mini Project-RTATC
