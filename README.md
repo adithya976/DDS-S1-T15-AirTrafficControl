@@ -6,7 +6,7 @@
 
   > Semester: 3rd Sem B. Tech. CSE
 
-  > Section: S1/S2
+  > Section: S1
 
   > Member-1: Himanshu Singh Patel, 231CS127, himanshusinghpatel.231cs127@nitk.edu.in
 
@@ -17,6 +17,13 @@
 
 
 ## Abstract
+<details>
+  <summary>Detail</summary>
+  
+  > 
+</details>
+
+
 ## Working
 ## Logisim
 ## Verilog Code
