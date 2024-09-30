@@ -1,2 +1,8 @@
 # Real Time Air Traffic Control System
-DDS Mini Project-RTATC
+
+## Team Details
+## Abstract
+## Working
+## Logisim
+## Verilog Code
+
