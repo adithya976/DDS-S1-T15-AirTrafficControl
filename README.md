@@ -27,6 +27,12 @@
 > Our contribution lies in developing an automated ATC system that receives data from aircraft sensors—range, speed, altitude, and fuel level—as well as weather sensors. A majority voting circuit is incorporated to reduce errors in the sensor inputs, ensuring accurate and reliable data processing. We have integrated a RADAR detection feature, which monitors incoming planes approaching the airport for landing. One of the unique features of this project includes automatic emergency management feature. When an aircraft’s fuel level is critically low or if it has any damage, the system designates it as an emergency, prioritizes its landing, and dispatches ground vehicles to assist. If an aircraft’s fuel is too high, the system prevents it from landing until the fuel level reaches a safe threshold, avoiding potential risks. The system handles emergencies, prioritizes aircraft based on fuel status and other features, and improves the overall safety and reliability of airport operations through a fully automated process.
 </details>
 
+## Block Diagram
+<details>
+  <summary>Detail</summary>
+
+</details>
+
 
 ## Working
 <details>
