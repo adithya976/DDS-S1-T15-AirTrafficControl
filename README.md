@@ -33,9 +33,19 @@
 
 ## Functional Block Diagram
 <details>
-  <summary>Detail</summary>
+  <summary>Detail</summary><br>
+  <details>
+  <summary>Detailed Diagram:</summary><br>
+
+![S1-T15-ATC drawio1](https://github.com/user-attachments/assets/2180479f-c7b7-4f76-8cf6-069899c3aba1)  
+</details>
   
-  ![S1-T15-ATC drawio1](https://github.com/user-attachments/assets/2180479f-c7b7-4f76-8cf6-069899c3aba1)
+  
+
+Siplified Diagram:
+
+![S1-T15 simplifiedATC drawio](https://github.com/user-attachments/assets/239b9ec2-c1e0-4eae-b124-1f402589f111)
+
 </details>
 
 
