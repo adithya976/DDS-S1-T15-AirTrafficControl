@@ -55,17 +55,18 @@ Simplified Diagram:
 
   ![image](https://github.com/user-attachments/assets/240a793a-cd5b-4d06-8e10-f36563ebce8b)
 
- 1. Initial Inputs (Start)
-      The process begins with the system receiving inputs from two different sources, depending on                 whether the aircraft is landing or taking off.
+ ###  Initial Inputs (Start)
+ 
+  The process begins with the system receiving inputs from two different sources, depending on whether the aircraft is landing or taking off.
 Landing:      The system gets inputs from a radar that detects an aircraft approaching for landing.
 Takeoff:       The plane sends a signal indicating it’s ready to take off. This includes the gate number. 
 Simultaneously, weather conditions are monitored to ensure it is safe for either landing or takeoff.
 
-2. Landing Process
-    Flight Detection using Radar
-   Once a flight is detected, the system receives data from multiple sensors aboard the plane, such as  speed, range, height, fuel level, and emergency status.
+ ### Landing Process
+  Flight Detection using Radar
+  Once a flight is detected, the system receives data from multiple sensors aboard the plane, such as  speed, range, height, fuel level, and emergency status.
    Weather data is also gathered from the ATC.
-Minimization of Errors Using Majority Voting Circuit
+  Mnimization of Errors Using Majority Voting Circuit
 •	Logic Gate: Majority Voting Circuit (involves AND and OR gates).
    To ensure accurate input data, a majority voting circuit is used. This circuit minimizes the impact of faulty sensor readings.
    For instance, if three sensors are measuring the plane’s speed and two report a speed of 300 knots while one reports 310 knots, the system will choose the majority value.
@@ -73,72 +74,75 @@ Minimization of Errors Using Majority Voting Circuit
    The system aggregates the majority of correct data for various sensor inputs such as speed, range, and height, using this logic.
    In essence, the majority voting circuit outputs the most frequently reported sensor value, ensuring the plane’s vital data is accurately processed.
 
-Fuel Status and Emergency Handling
+  Fuel Status and Emergency Handling
+  low fuel
    The system also checks the plane’s fuel level and whether there is any emergency situation.
 It automatically considers the situation to be an emergency when fuel is low and when fuel is in excess, its let to be in air until it reaches optimum level. 
 Emergency Handling 
 The AND, OR  gate is used to detect emergencies by verifying two conditions:
-1.	Low fuel.
-2.	Emergency status (e.g., mechanical failure).
+	
+  
   If both conditions are met, the AND gate outputs true, signaling an emergency.
   In such cases, the system immediately allocates a dedicated emergency runway and dispatches ground support vehicles such as ambulances and fire trucks to assist the aircraft.
   If no emergency is detected, the system proceeds with checking weather conditions and runway vacancy.
-Weather Checking and Runway Vacancy
+  Weather Checking and Runway Vacancy
    Once the plane’s status is confirmed (no emergency), the system checks the weather conditions  and whether the runway is available for landing.
-Weather Check Using OR Gate
+   Weather Check Using OR Gate
   The OR gate is used to evaluate weather conditions.
  If any part of the weather input is favorable (such as visibility, wind speed, etc.), the system allows the operation to proceed.
 For example, if visibility is good and wind speed is within limits, the OR gate outputs true, and the system moves to check runway availability.
 However, if all weather conditions are unfavorable, the system waits until the weather improves. We use 12 second timer for that.
 Runway Vacancy Using Counter
- Once weather conditions are favorable, the system checks runway availability. An AND gate verifies two conditions:
-1.	Weather is favorable.
-2.	Runway is vacant.
-If both conditions are true, respective runway is assigned and the plane is cleared for landing.
-Runway Allocation 
+   Once weather conditions are favorable, the system checks runway availability. An AND gate verifies two conditions:
+  	Weather is favorable.
+	Runway is vacant.
+  If both conditions are true, respective runway is assigned and the plane is cleared for landing.
+  Runway Allocation 
 
    The counter is the core of this system, cycling through the values 0, 1, and 2 to handle the runway assignment.
-•	Counter Values:
-o	Counter = 0: Represents that Runway 1 is available and should be assigned.
-o	Counter = 1: Represents that Runway 2 is available and should be assigned.
-o	Counter = 2: No runway is available, so the timer circuit will be activated.
-If the runway is occupied, the system waits until it becomes vacant, or it engages a 15-second timer to avoid long delays.
+ •	Counter Values:
+  o	Counter = 0: Represents that Runway 1 is available and should be assigned.
+  o	Counter = 1: Represents that Runway 2 is available and should be assigned.
+  o	Counter = 2: No runway is available, so the timer circuit will be activated.
+  If the runway is occupied, the system waits until it becomes vacant, or it engages a 15-second timer to avoid long delays.
   Once the timer stops, the counter is reset to 0 and the same process is repeated (in this case runway 1 is allocated).
-If weather is not good and fuel is excess then there is a timer of 12 second.
-Second Timer 
+  If weather is not good and fuel is excess then there is a timer of 12 second.
+   Second Timer 
    If the runway remains occupied, the system initiates a 15-second timer.
-   The NOT gate initially holds the allocation, but after 15 seconds, the signal flips, allowing the system to proceed even if the runway is still technically occupied. The AND gate checks that both the weather remains favorable and the 15-second timer has expired. Once both conditions are met, the system allocates the runway for landing.
-Gate Allocation
+   The NOT gate initially holds the allocation, but after 15 seconds, the signal flips, allowing the system to proceed even if the runway is still technically occupied. The AND gate checks that both the weather 
+  remains favorable and the 15-second timer has expired. Once both conditions are met, the system allocates the runway for landing.
+  Gate Allocation
   The system checks the corresponding gates using the D flip-flops. Each D flip-flop stores either a 0 (indicating the gate is free) or a 1 (indicating the gate is occupied). 
   The system sequentially checks each flip-flop to determine if a gate is available:
-•	If a gate's flip-flop stores 0, that gate is immediately assigned to the aircraft, and the flip-flop is updated to store 1, marking the gate as occupied.
-•	If the flip-flop stores 1, the system continues to check the next gate in the sequence.
+	If a gate's flip-flop stores 0, that gate is immediately assigned to the aircraft, and the flip-flop is updated to store 1, marking the gate as occupied.
+	If the flip-flop stores 1, the system continues to check the next gate in the sequence.
   In cases where all gates for the selected runway are occupied (i.e., all flip-flops store 1), a timer is triggered. 
   After a specified period, the timer automatically makes one gate vacant by resetting its flip-flop to 0, indicating the gate is free for assignment.
   The system then assigns the newly vacated gate to the aircraft and updates the flip-flop accordingly.
   This method ensures efficient gate utilization while maintaining real-time tracking of gate statuses through the D flip-flops. 
   The memory of the system is dynamically updated based on the status of the gates, ensuring that the system operates smoothly even during peak traffic periods.
-________________________________________
-3. Takeoff Process
-Takeoff Clearance
-  Once the system confirms the runway is clear and weather conditions are favorable, the plane is cleared for takeoff.
-If the runway is occupied for more than 15 seconds, the system forces the allocation to avoid excessive delays.
- Once the plane takes off, it exits the system.
-1.	Weather Input:
-o	This input ensures that the system only allows takeoffs when weather conditions are clear.
- It works in conjunction with logic gates (AND/OR) to either allow or block the process based on the weather.
-3.	Gate Inputs:
-o	Planes waiting for takeoff are represented by gate inputs. Gates 1, 2, and 3 correspond to Runway 1, while Gates 4, 5, and 6 correspond to Runway
- 2. The system prioritizes runway assignment based on the plane’s gate: Runway 1 for gates 1–3, and Runway 2 for gates 4–6.
-5.	Runway Assigner:
-o	This module checks the availability of the preferred runway based on gate input.
-If the preferred runway is busy, the system assigns the other runway.
- If both runways are occupied, it triggers a 15-second timer before rechecking availability.
-7.	Timers:
-o	A 12-second timer is used once a runway is assigned to check if the weather remains clear. After the timer finishes, the plane can proceed if conditions are favorable.
-o	A 15-second timer is triggered if both runways are busy, pausing the system before rechecking runway availability.
-8.	Logic Gates and Runway Status:
-o	Logic gates like AND and OR manage the flow of signals, ensuring that takeoffs are only allowed when both the runway is free and the weather is clear. The system also tracks the status of runways (busy or free) using these gates.
+
+### Takeoff
+   Takeoff Clearance
+   Once the system confirms the runway is clear and weather conditions are favorable, the plane is cleared for takeoff.
+   If the runway is occupied for more than 15 seconds, the system forces the allocation to avoid excessive delays.
+   Once the plane takes off, it exits the system.
+   	Weather Input:
+   	This input ensures that the system only allows takeoffs when weather conditions are clear.
+   It works in conjunction with logic gates (AND/OR) to either allow or block the process based on the weather.
+   	Gate Inputs:
+   	Planes waiting for takeoff are represented by gate inputs. Gates 1, 2, and 3 correspond to Runway 1, while Gates 4, 5, and 6 correspond to Runway
+    The system prioritizes runway assignment based on the plane’s gate: Runway 1 for gates 1–3, and Runway 2 for gates 4–6.
+   	Runway Assigner:
+     This module checks the availability of the preferred runway based on gate input.
+    If the preferred runway is busy, the system assigns the other runway.
+    If both runways are occupied, it triggers a 15-second timer before rechecking availability.
+  	Timers:
+   	A 12-second timer is used once a runway is assigned to check if the weather remains clear. After the timer finishes, the plane can proceed if conditions are favorable.
+    A 15-second timer is triggered if both runways are busy, pausing the system before rechecking runway availability.
+      Logic Gates and Runway Status:
+  	Logic gates like AND and OR manage the flow of signals, ensuring that takeoffs are only allowed when both the runway is free and the weather is clear. The system also tracks the status of runways (busy or 
+     free) using these gates.
 
 
   In essence, this circuit automates runway assignments, using logic gates and timers to manage conflicts, weather conditions, and runway availability effectively.
