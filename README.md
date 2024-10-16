@@ -53,7 +53,7 @@ Simplified Diagram:
 <details>
   <summary>Detail</summary>
 
-  ![image](https://github.com/user-attachments/assets/240a793a-cd5b-4d06-8e10-f36563ebce8b)
+  ![Basic Structure](https://github.com/user-attachments/assets/48b6d6b2-4258-4859-89f3-08b8b56e760d)
 
  ###  Initial Inputs (Start)
  
@@ -172,6 +172,8 @@ Runway Vacancy Using Counter
 ### Majority Circuit Voting:
 ![Majority Voting Circuit](https://github.com/user-attachments/assets/e4d686e0-f012-4a0b-8244-25b1461a1dd8)
 
+### Counter:
+![Counter](https://github.com/user-attachments/assets/c3eabb94-da63-4d7a-bc51-0e5707d3fff5)
 
 ### Timer 12 :
 ![Timer 12](https://github.com/user-attachments/assets/57dcde00-4f99-4b2c-86eb-2bf0607d6338)
