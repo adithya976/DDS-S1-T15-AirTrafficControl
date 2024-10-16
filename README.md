@@ -157,9 +157,52 @@ Runway Vacancy Using Counter
 
 ## Logisim
 <details>
-  <summary>Detail</summary>
+  <summary>Detail</summary><br>  
 
-  > Update a neat logisim circuit diagram
+### Radar Input:
+![Radar Input](https://github.com/user-attachments/assets/709f26f1-416b-45c6-bcb4-939615090a14)
+
+### Basic Plane Inputs:
+![Plane Input](https://github.com/user-attachments/assets/3a55c208-2f63-4706-8e0d-e993521ab382)
+
+### Fuel Inputs:
+![Fuel](https://github.com/user-attachments/assets/4ed100ee-235d-48da-940a-0cd8a7c7ba33)
+
+
+### Majority Circuit Voting:
+![Majority Voting Circuit](https://github.com/user-attachments/assets/e4d686e0-f012-4a0b-8244-25b1461a1dd8)
+
+
+### Timer 12 :
+![Timer 12](https://github.com/user-attachments/assets/57dcde00-4f99-4b2c-86eb-2bf0607d6338)
+
+
+### Timer 15 :
+![Timer 15](https://github.com/user-attachments/assets/1ea9113c-757e-4d9d-b14a-b3894b9dbe03)
+
+
+### Binary To BCD:
+![Binary To BCD](https://github.com/user-attachments/assets/abc5d38f-f67d-4bd9-b50e-35fc7ca7c5aa)
+
+
+### BCD To Display:
+
+![BCD To Display](https://github.com/user-attachments/assets/fbbb09b2-a8b4-4dc1-82ed-de3cd5bfc10e)
+
+
+### Pulse Generator:
+![Pulse Generator](https://github.com/user-attachments/assets/3b0129f5-300e-4ab4-a7ed-d888ef0085d5)
+
+
+
+### Binary To Display:
+![Binary to Display](https://github.com/user-attachments/assets/7d24819a-bc04-4543-9dd1-629c69cbfe91)
+
+
+### Gate Chooser Displaay:
+
+![Gate chooser display](https://github.com/user-attachments/assets/19071ceb-c179-41f6-86fc-30b61c057a52)
+
 </details>
 
 ## Verilog Code
