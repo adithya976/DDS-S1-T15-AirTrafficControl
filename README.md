@@ -159,6 +159,10 @@ Runway Vacancy Using Counter
 <details>
   <summary>Detail</summary><br>  
 
+  ### Main Circuit:
+  ![MainCircuit](https://github.com/user-attachments/assets/65655b83-6c2e-4058-aa21-55c54a48d77b)
+
+
 ### Radar Input:
 ![Radar Input](https://github.com/user-attachments/assets/709f26f1-416b-45c6-bcb4-939615090a14)
 
@@ -175,11 +179,11 @@ Runway Vacancy Using Counter
 ### Counter:
 ![Counter](https://github.com/user-attachments/assets/c3eabb94-da63-4d7a-bc51-0e5707d3fff5)
 
-### Timer 12 :
+### Timer 12 sec:
 ![Timer 12](https://github.com/user-attachments/assets/57dcde00-4f99-4b2c-86eb-2bf0607d6338)
 
 
-### Timer 15 :
+### Timer 15 sec:
 ![Timer 15](https://github.com/user-attachments/assets/1ea9113c-757e-4d9d-b14a-b3894b9dbe03)
 
 
@@ -201,9 +205,14 @@ Runway Vacancy Using Counter
 ![Binary to Display](https://github.com/user-attachments/assets/7d24819a-bc04-4543-9dd1-629c69cbfe91)
 
 
-### Gate Chooser Displaay:
+### Gate Chooser Display:
 
 ![Gate chooser display](https://github.com/user-attachments/assets/19071ceb-c179-41f6-86fc-30b61c057a52)
+
+### Gate Number Display:
+
+![Gate Display](https://github.com/user-attachments/assets/03a25d7a-93fe-4711-ac9f-7adb534b430a)
+
 
 </details>
 
