@@ -163,7 +163,8 @@ Runway Vacancy Using Counter
   <summary>Detail</summary><br>  
 
   ### Main Circuit:
-  ![MainCircuit](https://github.com/user-attachments/assets/65655b83-6c2e-4058-aa21-55c54a48d77b)
+  
+  ![MainCircuit](https://github.com/user-attachments/assets/6a7df0f9-e028-40a0-a0a0-25b8abc2bfc7)
 
 
 ### Radar Input:
@@ -173,11 +174,16 @@ Runway Vacancy Using Counter
 ![Plane Input](https://github.com/user-attachments/assets/3a55c208-2f63-4706-8e0d-e993521ab382)
 
 ### Fuel Inputs:
-![Fuel](https://github.com/user-attachments/assets/4ed100ee-235d-48da-940a-0cd8a7c7ba33)
+
+![Fuel Input](https://github.com/user-attachments/assets/3c720905-95ff-4e64-994d-0d95049fc5f9)
 
 
 ### Majority Circuit Voting:
 ![Majority Voting Circuit](https://github.com/user-attachments/assets/e4d686e0-f012-4a0b-8244-25b1461a1dd8)
+
+### Custom Comparator:
+
+![Custom Comparator](https://github.com/user-attachments/assets/eb9de4a0-8bc3-408c-84be-1858dce84a3b)
 
 ### Counter:
 ![Counter](https://github.com/user-attachments/assets/c3eabb94-da63-4d7a-bc51-0e5707d3fff5)
