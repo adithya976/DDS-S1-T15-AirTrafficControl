@@ -150,6 +150,9 @@ Runway Vacancy Using Counter
   The gates ensure that all necessary factors, such as weather, runway availability, and emergency status, are checked and validated before an aircraft is cleared for takeoff or landing.
   The 12-second and 15 second timer helps prevent unnecessary delays, making the system efficient and responsive.
 
+### Truth Table:
+
+![TT](https://github.com/user-attachments/assets/3b6ef3e3-0c5e-4a55-b729-e4dd0cb8dd51)
 
 
   
